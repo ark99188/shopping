@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>註冊</title></head>
+<body>
+  <h1>會員註冊</h1>
+  {% if error %}
+  <p style="color:red;">{{ error }}</p>
+  {% endif %}
+  <form method="post">
+    用戶名: <input type="text" name="username"><br>
+    電子郵件: <input type="email" name="email"><br>
+    密碼: <input type="password" name="password"><br>
+    電話: <input type="text" name="phone"><br>
+    生日: <input type="date" name="birthdate"><br>
+    <input type="submit" value="註冊">
+  </form>
+  <p><a href="{{ url_for('index') }}">回首頁</a></p>
+</body>
+</html>

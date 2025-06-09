@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head><meta charset="UTF-8"><title>編輯個人資料</title></head>
+<body>
+<h1>編輯個人資料</h1>
+<form method="post">
+<p>用戶名: <strong>{{ user[1] }}</strong></p>
+<p>電子郵件: <input type="email" name="email" value="{{ user[2] }}" required></p>
+<p>密碼: <input type="text" name="password" value="{{ user[3] }}" required></p>
+<p>電話: <input type="text" name="phone" value="{{ user[4] }}"></p>
+<p>生日: <input type="date" name="birthdate" value="{{ user[5] }}"></p>
+<button type="submit">更新</button>
+</form>
+<p><a href="{{ url_for('index') }}">回首頁</a></p>
+</body>
+</html>
