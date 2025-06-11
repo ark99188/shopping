@@ -1,0 +1,5 @@
+py -m venv env
+env\Scripts\Activate.ps1
+pip install flask
+$env:FLASK_APP = "app.py"
+flask run

@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 DB_NAME = 'membership.db'
-user_cart = {}  # 簡單購物車示範用，實務請用 session 或資料庫
+user_cart = {}  
 
 def init_db():
     if not os.path.exists(DB_NAME):
@@ -87,7 +87,7 @@ def login():
 
         if result:
             iid, username = result
-            user_cart[iid] = {}  # 初始化購物車
+            user_cart[iid] = {}  
             return render_template('welcome.html', username=username, iid=iid)
         else:
             return render_template('login.html', error='電子郵件或密碼錯誤')
@@ -164,5 +164,3 @@ def checkout(iid):
 
     return render_template('checkout.html', cart_items=cart_items, total=total, iid=iid)
 
-if __name__ == '__main__':
-    app.run(debug=True)
