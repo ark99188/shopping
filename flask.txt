@@ -3,7 +3,6 @@
 Get-ExecutionPolicy
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-
 python -m venv env
 env\Scripts\Activate.ps1
 pip install flask
