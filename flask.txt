@@ -1,5 +1,10 @@
 終端機 > 新終端機
-py -m venv env
+
+Get-ExecutionPolicy
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+python -m venv env
 env\Scripts\Activate.ps1
 pip install flask
 $env:FLASK_APP = "app.py"
